@@ -1,7 +1,27 @@
+import {create} from "../../services/authService";
+
 const Create = () => {
+    async function createPet(e) {
+        e.preventDefault()
+        let formData = new FormData(e.currentTarget)
+        let name = formData.get('name')
+        let description = formData.get('description')
+        let imageUrl = formData.get('imageUrl')
+        let type = formData.get('type')
+
+        let data = {
+            name: name,
+            description: description,
+            imageUrl: imageUrl,
+            type: type
+        }
+
+        await create(data)
+    }
+
     return (
         <section id="create-page" className="create">
-            <form id="create-form" action="" method="">
+            <form id="create-form" action="/create" method="POST" onSubmit={createPet}>
                 <fieldset>
                     <legend>Add new Pet</legend>
                     <p className="field">
