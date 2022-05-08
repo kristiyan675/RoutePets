@@ -1,5 +1,11 @@
-export const login = (username) => {
-    localStorage.setItem('username', username)
+export const login = async (email, password) => {
+    let response = await fetch('http://localhost:3030/users/login', {
+        method: 'POST',
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify({email,password})
+    })
+    let data = await response.json()
+    return data
 }
 
 export const getUser = () => {
@@ -22,7 +28,11 @@ export const create = async (data) => {
 }
 
 export const getAll = async () => {
-    let response = await fetch('https://softuni-demo-server-custom.herokuapp.com/jsonstore/pets')
-    let pets = await response.json()
-    return Object.values(pets)
+    try {
+        let response = await fetch('https://softuni-demo-server-custom.herokuapp.com/jsonstore/pets')
+        let pets = await response.json()
+        return Object.values(pets)
+    } catch (e) {
+        console.log(e.message)
+    }
 }

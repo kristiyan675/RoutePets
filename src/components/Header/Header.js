@@ -1,8 +1,7 @@
 import {Link} from "react-router-dom";
 
 const Header = ({
-    isAuthenticated,
-    username
+    email
                 }) => {
 
     let guestNav = (
@@ -13,13 +12,12 @@ const Header = ({
     )
     let userNav = (
         <div id="user">
-            <span>Welcome, email</span>
+            <span>Welcome, {email}</span>
             <Link className="button" to="/my-pets">My Pets</Link>
             <Link className="button" to="/create">Add Pet</Link>
             <Link className="button" to="#">Logout</Link>
         </div>
     )
-
 
     return (
         <header id="site-header">
@@ -28,7 +26,7 @@ const Header = ({
                 <section className="navbar-dashboard">
                     <Link to="/">Dashboard</Link>
 
-                    {isAuthenticated ?
+                    {email ?
                         userNav
                         :guestNav
                     }

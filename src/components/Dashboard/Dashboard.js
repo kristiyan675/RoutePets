@@ -15,7 +15,7 @@ const Dashboard = () => {
         <section id="dashboard-page" className="dashboard">
             <h1>Dashboard</h1>
 
-            {pets.length > 0?
+            {pets && pets.length > 0?
                 <ul className="other-pets-list">
                     {pets.map(x => <PetCard key={x._id} pet={x}/>)}
                 </ul>

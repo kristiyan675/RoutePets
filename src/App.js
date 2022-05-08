@@ -6,31 +6,29 @@ import Create from "./components/Create/Create";
 import Login from "./components/Login/Login";
 import MyPets from "./components/MyPets/MyPets";
 import Register from "./components/Register/Register";
-import {useEffect, useState} from 'react'
-import * as authService from "./services/authService";
+import {useState} from 'react'
+import { AuthContext } from './contexts/AuthContext'
 
 function App() {
-    let [userInfo, setUserInfo] = useState({isAuthenticated: false, username: ''})
+    let [user, setUserInfo] = useState({
+        accessToken: '',
+        email: '',
+        password: ''
+    })
 
-    useEffect(() => {
-        let user = authService.getUser()
-        setUserInfo({
-                isAuthenticated: Boolean(user),
-                username:  user
-            })
-    },[])
+    const onLogin = (authData) => {
+        setUserInfo(authData)
+    }
 
-    const onLogin = (username) => {
-        setUserInfo({
-            isAuthenticated: true,
-            username: username
-        })
+    const onLogout = (username) => {
+
     }
 
     return (
+        <AuthContext.Provider value={''}>
         <div className="App">
             <div id="container">
-                <Header {...userInfo}/>
+                <Header {...user}/>
                 <main id="site-content">
                     <Routes>
                         <Route path='/' element={<Dashboard/>}/>
@@ -43,6 +41,7 @@ function App() {
                 <Footer/>
             </div>
         </div>
+        </AuthContext.Provider>
     );
 }
 

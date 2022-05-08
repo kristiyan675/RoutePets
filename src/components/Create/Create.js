@@ -1,6 +1,8 @@
 import {create} from "../../services/authService";
+import {useNavigate} from "react-router-dom";
 
 const Create = () => {
+    let navigate = useNavigate()
     async function createPet(e) {
         e.preventDefault()
         let formData = new FormData(e.currentTarget)
@@ -17,6 +19,7 @@ const Create = () => {
         }
 
         await create(data)
+        navigate('/')
     }
 
     return (
