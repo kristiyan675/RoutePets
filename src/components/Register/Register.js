@@ -1,4 +1,5 @@
 const Register = () => {
+
     return (
         <section id="register-page" className="register">
             <form id="register-form" action="" method="">

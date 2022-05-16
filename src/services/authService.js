@@ -8,6 +8,10 @@ export const login = async (email, password) => {
     return data
 }
 
+export const logout = async () => {
+    await fetch('http://localhost:3030/users/logout')
+}
+
 export const getUser = () => {
     let user = localStorage.getItem('username')
     return user

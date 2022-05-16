@@ -1,4 +1,9 @@
+import {useParams} from "react-router-dom";
+
+
+
 const Details = () => {
+
     return (
         <section id="details-page" className="details">
             <div className="pet-information">
@@ -9,7 +14,6 @@ const Details = () => {
 
                     <a className="button" href="#">Edit</a>
                     <a className="button" href="#">Delete</a>
-
 
 
                     <a className="button" href="#">Like</a>

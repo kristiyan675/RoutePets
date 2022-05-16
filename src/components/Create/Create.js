@@ -18,7 +18,8 @@ const Create = () => {
             type: type
         }
 
-        await create(data)
+        let res = await create(data)
+        console.log(res)
         navigate('/')
     }
 

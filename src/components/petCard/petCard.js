@@ -6,7 +6,7 @@ const PetCard = ({
             <h3>Name: {pet.name}</h3>
             <p>Type: {pet.type}</p>
             <p className="img"><img src={pet.imageUrl}/></p>
-            <a className="button" href={pet._id}>Details</a>
+            <a className="button" href={`/details/${pet._id}`}>Details</a>
         </li>
     )
 };
