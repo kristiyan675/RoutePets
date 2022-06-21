@@ -4,12 +4,12 @@ import {AuthContext} from "../../contexts/AuthContext";
 
 const Header = () => {
     const {user} = useContext(AuthContext)
-    let guestNav = (
-        <div id="guest">
-            <Link className="button" to="/login">Login</Link>
-            <Link className="button" to="/register">Register</Link>
-        </div>
-    )
+    // let guestNav = (
+    //     <div id="guest">
+    //         <Link className="button" to="/login">Login</Link>
+    //         <Link className="button" to="/register">Register</Link>
+    //     </div>
+    // )
     let userNav = (
         <div id="user">
             <span>Welcome, {user.email}</span>
