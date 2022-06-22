@@ -31,7 +31,7 @@ const Edit = () => {
 
                             <select id="type" name="type" value="dog">
                            
-                                <option value="dog" selected>Dog</option>
+                         
                                 <option value="parrot">Parrot</option>
                                 <option value="reptile">Reptile</option>
                                 <option value="other">Other</option>
