@@ -14,6 +14,7 @@ const Edit = () => {
                         <label htmlFor="description">Description</label>
                         <span className="input">
                             <textarea name="description"
+                            className="description"
                                       id="description">Today, some dogs are used as pets, others are used to help humans do their work. They are a popular pet because they are usually playful, friendly, loyal and listen to humans. Thirty million dogs in the United States are registered as pets.[5] Dogs eat both meat and vegetables, often mixed together and sold in stores as dog food. Dogs often have jobs, including as police dogs, army dogs, assistance dogs, fire dogs, messenger dogs, hunting dogs, herding dogs, or rescue dogs.</textarea>
                         </span>
                     </p>
