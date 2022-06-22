@@ -33,6 +33,10 @@ const Edit = () => {
                                 <option value="parrot">Parrot</option>
                                 <option value="reptile">Reptile</option>
                                 <option value="other">Other</option>
+                                <option value="other">Other</option>
+                                <option value="other">Other</option>
+                                <option value="other">Other</option>
+                                <option value="other">Other</option>
                             </select>
                         </span>
                     </p>
