@@ -28,10 +28,10 @@ const Edit = () => {
                         <span className="input">
                             <select id="type" name="type" value="dog">
                                 <option value="cat">Cat</option>
-                                <option value="dog" selected>Dog</option>
-                                <option value="parrot">Parrot</option>
-                                <option value="reptile">Reptile</option>
-                                <option value="other">Other</option>
+                                <option value="dog" selected>Cat</option>
+                                <option value="parrot">Cat</option>
+                                <option value="reptile">Cat</option>
+                                <option value="other">Other Cat</option>
                             </select>
                         </span>
                     </p>
