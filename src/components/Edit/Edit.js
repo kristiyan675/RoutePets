@@ -28,7 +28,7 @@ const Edit = () => {
                         <label htmlFor="type">Type</label>
                         <span className="input">
                             <select id="type" name="type" value="dog">
-                            <option value="cat">Cat</option>
+                           
                                 <option value="dog" selected>Dog</option>
                                 <option value="parrot">Parrot</option>
                                 <option value="reptile">Reptile</option>
