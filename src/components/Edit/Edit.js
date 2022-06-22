@@ -26,13 +26,14 @@ const Edit = () => {
                     <p className="field">
                         <label htmlFor="type">Type</label>
                         <span className="input">
-                            <select id="type" name="type" value="dog">
+                            {/* <select id="type" name="type" value="dog">
                                 <option value="cat">Cat</option>
                                 <option value="dog" selected>Dog</option>
                                 <option value="parrot">Parrot</option>
                                 <option value="reptile">Reptile</option>
                                 <option value="other">Other</option>
-                            </select>
+                            </select> */}
+                            sdasdasdasdad
                         </span>
                     </p>
                     <input className="button submit" type="submit" value="Save"/>
