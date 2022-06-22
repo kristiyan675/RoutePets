@@ -28,6 +28,7 @@ const Edit = () => {
                         <label htmlFor="type">Type</label>
                         <span className="input">
                             <select id="type" name="type" value="dog">
+<<<<<<< HEAD
                             <option value="cat">Cat</option>
                                 <option value="dog" selected>Dog</option>
                                 <option value="parrot">Parrot</option>
@@ -37,6 +38,13 @@ const Edit = () => {
                                 <option value="other">Other</option>
                                 <option value="other">Other</option>
                                 <option value="other">Other</option>
+=======
+                                <option value="cat">Cat</option>
+                                <option value="dog" selected>Cat</option>
+                                <option value="parrot">Cat</option>
+                                <option value="reptile">Cat</option>
+                                <option value="other">Other Cat</option>
+>>>>>>> main
                             </select>
                         </span>
                     </p>
